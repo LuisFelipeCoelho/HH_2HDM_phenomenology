@@ -1,0 +1,18 @@
+set run_mode 0
+set nb_core 1
+
+generate p p > b b~ b b~ j j [QCD]
+output /lstore/calo/lcoelho/MG_samples/pp_bbbbjj
+launch
+
+order = NLO
+fixed_order = OFF
+shower = PYTHIA8
+madspin = ON
+reweight = OFF
+done
+
+set ebeam1 = 7000
+set ebeam2 = 7000
+set nevents = 100000
+done

@@ -1,0 +1,33 @@
+
+#set run_mode 2
+#set nb_core 3
+
+#install mg5amc_py8_interface
+
+#import model /home/t3atlas/lcoelho/subMad/MG5_aMC_v2_9_1_2/models/loop_qcd_qed_sm-with_b_mass
+#import model /lstore/calo/lcoelho/MG_samples/MG5_aMC_v2_9_1_2/models/loop_qcd_qed_sm-with_b_mass
+define v = w+ w- z
+
+generate p p > h > h h j j $$ v / a [QCD]
+#generate p p > h h j j [QCD]
+output /home/t3atlas/lcoelho/subMad/MG5_aMC_v2_9_1_2/VBF_3h_loop_sm
+#launch /lstore/calo/lcoelho/MG_samples/MG5_aMC_v2_9_1_2/VBF_no3h_hh_sm
+#launch 
+
+#order = NLO
+#fixed_order = OFF
+#shower = PYTHIA8
+#madspin = ON
+#reweight = OFF
+#done
+
+#set ebeam1 = 7000
+#set ebeam2 = 7000
+#set nevents = 10
+#set MH = 1.250000e+02
+#set spinmode none 
+#import model /lstore/calo/lcoelho/MG_samples/MG5_aMC_v2_9_1_2/models/loop_qcd_qed_sm-with_b_mass
+#decay h > b b~ [QCD]
+#done
+exit
+

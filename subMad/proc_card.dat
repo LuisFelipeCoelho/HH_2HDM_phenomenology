@@ -1,0 +1,15 @@
+generate p p > z z j j [QCD]
+output /lstore/calo/lcoelho/MG_samples/pp_zzjj_bbbbjj
+launch
+
+order = NLO
+fixed_order = OFF
+shower = PYTHIA8
+madspin = ON
+reweight = OFF
+done
+
+set ebeam1 = 7000
+set ebeam2 = 7000
+decay z > b b~
+done
